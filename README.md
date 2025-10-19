@@ -2,7 +2,7 @@
 
 Một project game 2D được xây dựng bằng Python và Pygame, không chỉ là một trò chơi giải đố mê cung mà còn là một công cụ mạnh mẽ để trực quan hóa, so sánh và tìm hiểu về các thuật toán tìm đường phổ biến trong lĩnh vực Trí tuệ nhân tạo.
 
-![Giao diện Menu](Menu.png)
+![Giao diện Menu](Menu.png))
 *(Menu chính của game)*
 
 ---

@@ -29,7 +29,7 @@ class Menu:
 
         # --- DỮ LIỆU CHO MENU ---
         self.options = [
-            config.DIFFICULTY_LEVELS, # <<< Sửa lại như thế này
+            config.DIFFICULTY_LEVELS,
             list(PATHFINDING_ALGORITHMS.keys()),
             config.MAP_THEMES
         ]
@@ -85,17 +85,6 @@ class Menu:
             pygame.draw.line(self.screen, dark_edge_color, rect.topright, rect.bottomright, 2)
             text_offset = 0
         text_surf = font.render(text, True, text_color); text_rect = text_surf.get_rect(center=rect.center); self.screen.blit(text_surf, text_rect.move(0, text_offset))
-
-    def _draw_credit_banner(self):
-        project_title = "Maze Escape Project"; members = ["Phạm Công Trường"]; margin = 15
-        line_height = self.font_credit_member.get_height() + 5; 
-        title_surf = self.font_credit_title.render(project_title, True, (220, 220, 220))
-        title_rect = title_surf.get_rect(bottomright=(self.width - margin, self.height - margin - (len(members) * line_height))); 
-        self.screen.blit(title_surf, title_rect)
-        for i, member_text in enumerate(members):
-            member_surf = self.font_credit_member.render(member_text, True, (255, 255, 255))
-            y_position = self.height - margin - ((len(members) - 1 - i) * line_height)
-            member_rect = member_surf.get_rect(bottomright=(self.width - margin, y_position)); self.screen.blit(member_surf, member_rect)
 
     def handle_input(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
@@ -171,7 +160,7 @@ class Menu:
                 rect = pygame.Rect(0, 0, button_width, button_height); rect.center = (col_xs[0], y_pos)
                 is_selected = self.current_difficulty == level
                 self._draw_pixel_button(rect, config.DIFFICULTY_SETTINGS[level]["DISPLAY_NAME"], self.font_medium, 
-                                      color_sets[0] if is_selected else default_colors, is_selected, rect.collidepoint(mouse_pos))
+                                        color_sets[0] if is_selected else default_colors, is_selected, rect.collidepoint(mouse_pos))
                 self.buttons[level] = rect
                 
             # Cột 2: Algorithm
@@ -181,7 +170,7 @@ class Menu:
                 rect.center = (col_xs[1], y_pos)
                 is_selected = self.current_algorithm == algo
                 self._draw_pixel_button(rect, algo, self.font_medium,
-                                      color_sets[1] if is_selected else default_colors, is_selected, rect.collidepoint(mouse_pos))
+                                        color_sets[1] if is_selected else default_colors, is_selected, rect.collidepoint(mouse_pos))
                 self.algo_buttons[algo] = rect
                 
             # Cột 3: Map Theme
@@ -190,7 +179,5 @@ class Menu:
                 rect = pygame.Rect(0, 0, button_width, button_height); rect.center = (col_xs[2], y_pos)
                 is_selected = self.current_map_index == theme_index
                 self._draw_pixel_button(rect, self.options[2][theme_index].replace("_", " ").capitalize(), self.font_medium,
-                                      color_sets[2] if is_selected else default_colors, is_selected, rect.collidepoint(mouse_pos))
+                                        color_sets[2] if is_selected else default_colors, is_selected, rect.collidepoint(mouse_pos))
                 self.map_buttons[theme_index] = rect
-        
-        self._draw_credit_banner()
