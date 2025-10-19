@@ -50,7 +50,7 @@ Một project game 2D được xây dựng bằng Python và Pygame, không ch�
 
 1.  **Clone repository về máy:**
     ```bash
-    git clone [https://github.com/SaiCTruong/Game-Escape-Maze](https://github.com/SaiCTruong/Game-Escape-Maze)
+    git clone https://github.com/SaiCTruong/Game-Escape-Maze
     ```
 
 2.  **Di chuyển vào thư mục project:**
