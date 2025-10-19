@@ -123,3 +123,9 @@ game_project/
 ├── requirements.txt      # Danh sách các thư viện cần thiết
 └── README.md             # File bạn đang đọc
 ```
+---
+
+## 👨‍💻 Tác giả
+
+* **Võ Tấn Tài** - [Anttia2404](https://github.com/Anttia2404)
+* **Phạm Công Trường** - [SaiCTruong](https://github.com/SaiCTruong)
