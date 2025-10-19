@@ -65,7 +65,7 @@ Một project game 2D được xây dựng bằng Python và Pygame, không ch�
     -   Trên Windows: `venv\Scripts\activate`
     -   Trên macOS/Linux: `source venv/bin/activate`
 
-4.  **Cài đặt Pygame trực tiếp vào môi trường ảo**
+4.  **Cài đặt Pygame trực tiếp vào môi trường ảo:**
     *Hãy đảm bảo bạn vẫn thấy (venv) ở đầu dòng lệnh, sau đó chạy lệnh sau:*
     ```bash
     pip install pygame
